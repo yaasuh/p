@@ -1,0 +1,205 @@
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trirong", serif;
+    text-align: center;
+}
+
+/* Body styles */
+#body {
+    background-image: linear-gradient(135deg, #00C9FF, #92FE9D);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+/* Container styles */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header and rules text styles */
+#header {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.rules {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Form group styles */
+.form__group {
+    margin-bottom: 15px;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Label styles */
+.form__label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Label hover animation */
+.form__label:hover {
+    color: #4facfe;
+    transform: scale(1.1);
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Input styles */
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: linear-gradient(to top right, #fde2e2, #00FFFF);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input:focus {
+    transform: scale(1.05);
+    border-color: #00f2fe;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover animation */
+.input:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Submit button styles */
+.submit-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: width 0.4s ease, border-radius 0.4s ease, transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-button:hover {
+    width: 150px;
+    border-radius: 25px;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+}
+
+/* Enhanced Popup styles */
+.done-popup {
+    display: none; /* Change to block when showing */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #66bb6a, #43a047); /* Gradient for success */
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: popupBounce 0.5s ease-in-out, popupFadeOut 0.5s ease-in-out 3s forwards; /* Added fade out */
+}
+
+/* Icon styles */
+.done-popup .icon {
+    font-size: 50px; /* Size of the success icon */
+    margin-bottom: 10px;
+    animation: bounceIcon 0.5s ease-in-out infinite; /* Infinite bounce effect */
+}
+
+/* Bounce animation */
+@keyframes popupBounce {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Bounce effect for icon */
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Fade out animation */
+@keyframes popupFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+p{
+    margin-top: 500px;
+}
