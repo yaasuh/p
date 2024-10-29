@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Trirong:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body id="body">
+    <div class="container">
+        <div id="div1">
+            <h2 id="header">Partnership Requirements</h2>
+            <p class="rules">
+                1. Must have 500 members or above.<br>
+                2. Must have 100 members online or above.<br>
+                3. Tokens servers are not allowed for partnership.<br>
+                4. Abusive language, religion hate towards our staff won’t be tolerated.<br>
+                5. Stealing staff or DM promotions not allowed.<br>
+                6. Show respect to each other.
+            </p>
+            <form id="submitForm">
+                <div class="form__group field">
+                    <label for="members" class="form__label"><i class="fas fa-users"></i> Members</label><br>
+                    <input type="number" name="members" min="500" placeholder="(More Than 500)" required id="members" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <label for="online" class="form__label"><i class="fas fa-signal"></i> Online</label><br>
+                    <input type="number" name="online" min="100" placeholder="Online Members" required id="online" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <label for="reason" class="form__label"><i class="fas fa-question"></i> Reason</label><br>
+                    <input type="text" placeholder="Reason to be partner?" required id="reason" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <label for="invite" class="form__label"><i class="fas fa-link"></i> Invite</label><br>
+                    <input type="text" placeholder="Server Invite Link or Vanity" required id="invite" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <label for="insta" class="form__label"><i class="fab fa-instagram"></i> Instagram Username</label><br>
+                    <input type="text" placeholder="Instagram Username" required id="insta" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <label for="user" class="form__label"><i class="fas fa-user"></i> Discord Username</label><br>
+                    <input type="text" placeholder="Discord Username" required id="user" class="input"><br>
+                </div>
+                <div class="form__group field">
+                    <input type="submit" value="Submit" id="button" class="submit-button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Done popup -->
+    <div id="donePopup" class="done-popup">Done!</div>
+    <div class="done-popup" id="donePopup">
+    <div class="icon">✔️</div> <!-- Success Icon -->
+    <div style="font-size: 1.2em; font-weight: bold;">Success!</div>
+    <div>Your work is done!</div>
+</div>
+
+</div>
+
+</body>
+</html>
